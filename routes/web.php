@@ -20,3 +20,10 @@ Route::get('/', function () {
 use App\Http\Controllers\MatkulController;
 
 Route::get('/matkul', [MatkulController::class, 'index']);
+
+Route::get('/matkul/create', [MatkulController::class, 'create']);
+Route::post('/matkul', [MatkulController::class, 'store']);
+Route::get('/matkul/{id}/edit', [MatkulController::class, 'edit']);
+Route::put('/matkul/{id}', [MatkulController::class, 'update']);
+Route::delete('/matkul/{id}', [MatkulController::class, 'destroy']);
+Route::get('/matkul/cetak', [MatkulController::class, 'cetak']);
